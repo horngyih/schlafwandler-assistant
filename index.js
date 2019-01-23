@@ -8,6 +8,10 @@ const port = (args.length>0)?parseInt(args[0])||defaultPort : defaultPort;
 
 app.use( _express.static("public") );
 
+app.get( "/fb", ( req, res )=>{
+    res.send("Facebook");
+});
+
 app.get("/fb/auth", (req, res)=>{
     res.send("ACK");
 });
