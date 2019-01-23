@@ -26,6 +26,13 @@
 </head>
 
 <body>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></fb:login-button>
 </body>
-
+<script type="text/javascript">
+    function checkLoginState(){
+        FB.getLoginStatus(res=>{
+            console.log( res );
+        });
+    }
+</script>
 </html>
